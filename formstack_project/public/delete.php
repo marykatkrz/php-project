@@ -5,6 +5,7 @@ if (isset($_GET['id'])) {
     if($connection->connect_error){
         die("Connection failed:" . $connection->connect_error);
         }
+// Delete document
 $id = $_GET['id'];
 $sql = "DELETE FROM users WHERE id='$id'";
     $statement=mysqli_query($connection, $sql);
@@ -18,6 +19,7 @@ $sql = "DELETE FROM users WHERE id='$id'";
 $connection->close();
 }
 ?>
+<!-- Updated list after deleted document -->
 <?php include "templates/header.php"; ?>
   <h2>Documents</h2>
 <?php 
@@ -29,7 +31,6 @@ $connection->close();
   $sql = "SELECT * FROM users";
   $result = $connection->query($sql);
 ?>
-
 <table>
   <thead>
     <tr>

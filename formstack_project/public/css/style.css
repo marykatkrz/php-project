@@ -23,7 +23,7 @@ h1{
 form{
    display: flex;
    flex-direction: column;
-   margin: 20px 400px;
+   margin: 10px 10px;
 }
 i{
     font-size: 16pt;
@@ -37,4 +37,9 @@ td{
 }
 th{
     padding: 20px;
+}
+@media (min-width: 1025px){
+    form{
+        margin: 20px 400px;
+     }
 }

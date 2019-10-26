@@ -1,5 +1,6 @@
 <?php include "templates/header.php"; ?>
   <?php require_once 'process.php'; ?>
+  <!-- Create new document -->
     <form action="" method="POST">
         <label>Last Name</label>
         <input type="text" name="lastname">

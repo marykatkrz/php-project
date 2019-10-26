@@ -8,12 +8,13 @@
           die("Connection failed:" . $connection->connect_error);
           }
   $id = $_GET['id'];
+  // Make sure updating information associated with selected document
   $sql = "SELECT * FROM users WHERE id = '$id'";
   $result=mysqli_query($connection, $sql);
   $user=mysqli_fetch_assoc($result);
   $connection->close();           
   }
-      
+  // Updates information
   if (isset($_POST['submit'])) {
     $connection = new mysqli($host, $username, $password, $dbname);
     $id       = $_POST['id'];
@@ -23,14 +24,12 @@
     $location  = $_POST['location'];
     date_default_timezone_set('America/Los_Angeles');
     $modified  = $date = date('Y/m/d H:i:s');
- 
     $sql = "UPDATE users SET id = '$id', firstname = '$firstname', lastname = '$lastname', age = '$age', location = '$location',  lastmodified='$modified' WHERE id = '$id'";
     $statement=mysqli_query($connection, $sql);
     $connection->close();
-  
     }  
     ?>
-
+  <!-- Form with old values in place to be edited -->
   <?php require_once 'process.php'; ?>
     <form method="POST">
     <?php foreach ($user as $key => $value):  ?>

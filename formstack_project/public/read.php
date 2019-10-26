@@ -1,11 +1,14 @@
 <?php include "templates/header.php"; ?>
   <h2>Documents</h2>
 <?php 
+  header("Access-Control-Allow-Origin: *");
+  header("Content-Type: application/json; charset=UTF-8");
   require "../config.php";
   $connection = new mysqli($host, $username, $password, $dbname);
   if($connection->connect_error){
       die("Connection failed:" . $connection->connect_error);
       }
+  // List all current documents and their values
   $sql = "SELECT * FROM users";
   $result = $connection->query($sql);
 ?>
