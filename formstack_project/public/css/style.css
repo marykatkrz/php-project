@@ -1,0 +1,40 @@
+body{
+    text-align: center;
+    margin: 100px;
+    font-family: 'Jomolhari', serif;
+}
+button{
+    background-color: rgb(18, 97, 54);
+    padding: 15px;
+    cursor: pointer;
+    margin: 20px;
+    color: white;
+}
+button:hover{
+    background-color: rgb(29, 124, 93);
+}
+button a{
+    text-decoration: none;
+    color: white;
+}
+h1{
+    font-size: 32px;
+}
+form{
+   display: flex;
+   flex-direction: column;
+   margin: 20px 400px;
+}
+i{
+    font-size: 16pt;
+    color: rgb(18, 97, 54);
+    margin: 30px;
+}
+td{
+    border-bottom: 1px solid grey;
+    padding: 15px;
+   
+}
+th{
+    padding: 20px;
+}
